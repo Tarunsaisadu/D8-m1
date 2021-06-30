@@ -1,0 +1,198 @@
+<!-- saved from url=(0433)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/411511435634782.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210630%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210630T115327Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27D8.html&X-Amz-Signature=19447de8299133acb8f7fb193754ec609cb84a608f15dc7f17c8d5156f7a608f -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <script>
+      /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+      const changeTitle = function (newTitle) {
+        document.title = newTitle;
+      };
+
+      /* EXERCISE 2
+      Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      const addClassToTitle = function () {
+        let v = document.getElementsByTagName("h1");
+        v[0].classList.add("myHeading");
+      };
+
+      /* EXERCISE 3
+      Write a function for changing the text of only the p which are children of a div.
+      */
+
+      /*const changePcontent = function () {
+        var your_div = document
+          .getElementsByTagName("div")
+          .getElementsByTagName("p");
+
+        //var text_to_change = your_div.childNodes[0];
+
+        your_div[0]. = " hi im Tarun";
+      };
+      */
+      /* EXERCISE 4
+      Write a function for changing the destination of every link to https://www.google.com
+      */
+
+      const changeUrls = function () {
+        var an = document.getElementsByTagName("a");
+        for (var i = 0; i < an.length; i++) {
+          an[i].href = "https://www.google.com";
+        }
+      };
+
+      /* EXERCISE 5
+       Write a function for adding a new item in the second list.
+       */
+
+      const addToTheSecond = function (content) {
+        let sl = document.createElement("LI");
+        let n = document.createTextNode(content);
+        sl.appendChild(n);
+        document.getElementById("secondList").appendChild(sl);
+      };
+
+      /* EXERCISE 6
+      Write a function for adding a second paragraph to the div.
+      */
+
+      const addParagraph = function (content) {
+        var tag = document.createElement("p");
+        var text = document.createTextNode(content);
+        tag.appendChild(text);
+        var element = document.getElementById("new");
+        element.appendChild(tag);
+      };
+
+      /* EXERCISE 7
+      Write a function for making the first UL disappear.
+      */
+
+      const firstUlDisappear = function () {
+        document.getElementById("firstList").style.visibility = "hidden";
+      };
+
+      /* EXERCISE 8
+      Write a function for making the background of every UL green.
+      */
+
+      const paintItGreen = function () {
+        document.getElementsByTagName("LI").style.backgroundColor = green;
+      };
+
+      /* EXERCISE 9
+      Make the heading of the page change color every time the user clicks on it.
+      */
+
+      const makeItClickable = function () {
+        const myColors = [
+          "red",
+          "purple",
+          "#E84751",
+          "blue",
+          "orange",
+          "#323643",
+        ];
+        let cnt = 0;
+
+        document.querySelector("div").addEventListener("click", function () {
+          if (cnt >= myColors.length) cnt = 0; // reset
+          this.style.color = myColors[cnt];
+          cnt++;
+        });
+      };
+
+      /* EXERCISE 10
+      Change the footer text with something else when the user clicks on it.
+      */
+
+      const changeFooterText = function () {
+        //
+      };
+
+      /* EXERCISE 11
+      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+      const inputField = document.getElementById("input-field");
+      // ...
+
+      /* EXERCISE 12
+      Create a new welcome alert message when the page successfully loads.
+      */
+
+      window.onload = function () {
+        changeTitle("hello");
+        addClassToTitle();
+        // changePcontent();
+        changeUrls();
+        addToTheSecond(" coding");
+        addParagraph(" im home");
+        firstUlDisappear();
+        paintItGreen();
+        makeItClickable();
+      };
+
+      /* EXERCISE 13
+      Use HTML5 tags to divide the content of the page in a more semantic way.
+      */
+    </script>
+
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQifSwidmVyc2lvbiI6IjEuOC4wIiwic2NvcmUiOjEwODAwMH1d"
+    data-new-gr-c-s-check-loaded="14.1018.0"
+    data-gr-ext-installed=""
+  >
+    <header>
+      <h1 onclick="changeTitle()">This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a
+        href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school"
+        >This link goes to Strive School</a
+      >
+
+      <div id="new" bis_skin_checked="1">
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div bis_skin_checked="1">
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>And this text is just for the exercise too!</p>
+    </footer>
+  </body>
+</html>
