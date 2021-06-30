@@ -111,7 +111,9 @@
       */
 
       const changeFooterText = function () {
-        //
+        document
+          .getElementsByTagName("footer")[0]
+          .getElementsByTagName("p").innerHTML = " this is changed paragraph";
       };
 
       /* EXERCISE 11
@@ -135,6 +137,7 @@
         firstUlDisappear();
         paintItGreen();
         makeItClickable();
+        changeFooterText();
       };
 
       /* EXERCISE 13
